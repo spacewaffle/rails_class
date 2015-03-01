@@ -2,25 +2,28 @@
 <h1>
   <span id="drawing"></span>
   <script>
-    var draw = SVG('drawing').fixSubPixelOffset().size(55, 70)
+    var draw = SVG('drawing').fixSubPixelOffset().size(55, 80)
 
-var rect = draw.polygon().ngon({
-             radius: 25 
-           , edges:    6
-           }).move(5, 15).fill({ opacity: 0 }).stroke({ color: 'rgb(99, 236, 167)', opacity: 0, width: 7 })
-  // rect.animate(800, 'SVG.easing.elastic', 1000).move(5, 5).stroke({ opacity: 1 })
-  var drop, raise;
-  drop = function() {
+    var hex = draw.polygon().ngon({
+               radius: 25 
+             , edges:    6
+             }).move(5, 20).fill({ opacity: 0 }).stroke({ color: 'rgb(99, 236, 167)', opacity: 0, width: 8 })
+    var rail = draw.rect(10, 40).move(25, 0).rotate(-50).skew(-50, 0).fill({ color: 'gray' })
+
+    var rail2 = draw.rect(10, 40).move(47, 0).rotate(-50).skew(-50, 0).fill({ color: 'gray' })
+
+    var drop, raise;
+    drop = function() {
+        setTimeout(function() {
+          hex.animate(500, SVG.easing.backout).move(5, 20).stroke({ opacity: 0 }).after(raise)
+        }, 5000)
+      }
+    raise = function() {
       setTimeout(function() {
-        rect.animate(500, SVG.easing.backout).move(5, 15).stroke({ opacity: 0 }).after(raise)
-      }, 5000)
+        hex.animate(1000, SVG.easing.bounce).move(5, 10).stroke({ opacity: 1 }).after(drop)
+      }, 500);
     }
-  raise = function() {
-    setTimeout(function() {
-      rect.animate(1000, SVG.easing.bounce).move(5, 5).stroke({ opacity: 1 }).after(drop)
-    }, 500);
-  }
-  raise();
+    raise();
 
   </script>
   <span class="logo">
