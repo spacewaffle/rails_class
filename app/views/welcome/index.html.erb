@@ -8,8 +8,20 @@ var rect = draw.polygon().ngon({
              radius: 25 
            , edges:    6
            }).move(5, 15).fill({ opacity: 0 }).stroke({ color: 'rgb(99, 236, 167)', opacity: 0, width: 7 })
-  rect.animate(800, '<>', 1000).move(5, 5).stroke({ opacity: 1 }).loop()
-// rect.animate().rotate(45).skew(25, 0)
+  // rect.animate(800, 'SVG.easing.elastic', 1000).move(5, 5).stroke({ opacity: 1 })
+  var drop, raise;
+  drop = function() {
+      setTimeout(function() {
+        rect.animate(500, SVG.easing.backout).move(5, 15).stroke({ opacity: 0 }).after(raise)
+      }, 5000)
+    }
+  raise = function() {
+    setTimeout(function() {
+      rect.animate(1000, SVG.easing.bounce).move(5, 5).stroke({ opacity: 1 }).after(drop)
+    }, 500);
+  }
+  raise();
+
   </script>
   <span class="logo">
     <span class="highlight">Rails</span>Class
