@@ -1,5 +1,20 @@
 
-<h1><span class="highlight">Learn</span> <wbr>Ruby on Rails</h1>
+<h1>
+  <span id="drawing"></span>
+  <script>
+    var draw = SVG('drawing').fixSubPixelOffset().size(55, 70)
+
+var rect = draw.polygon().ngon({
+             radius: 25 
+           , edges:    6
+           }).move(5, 15).fill({ opacity: 0 }).stroke({ color: 'rgb(99, 236, 167)', opacity: 0, width: 7 })
+  rect.animate(800, '<>', 1000).move(5, 5).stroke({ opacity: 1 }).loop()
+// rect.animate().rotate(45).skew(25, 0)
+  </script>
+  <span class="logo">
+    <span class="highlight">Rails</span>Class
+  </span>
+</h1>
 
 <div class="container">
   <div class="wrapper">

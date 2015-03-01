@@ -1,3 +1,6 @@
+$green: #1CDF7D;
+$button_green: rgb(99, 236, 167);
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,6 +51,7 @@ body{
   text-align: center;
 }
 h1{
+  position: relative;
   font-size: 50px;
   font-weight: bold;
   text-align: center;
@@ -207,5 +211,16 @@ video{
   }
 }
 .highlight{
-  color: #1CDF7D;
+  color: $green;
+  position: relative;
+}
+
+#drawing{
+  position: relative;
+  top: 7px;
+  display: inline-block;
+}
+
+.logo{
+  vertical-align: super;
 }
