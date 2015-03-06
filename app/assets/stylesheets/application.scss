@@ -1,5 +1,6 @@
 $green: #1CDF7D;
 $button_green: rgb(99, 236, 167);
+$blue: #5CC8F7;
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -18,7 +19,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  // font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -43,6 +44,11 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 body{
@@ -180,12 +186,13 @@ video{
 }
 
 .tst_module{
-  width: 200px;
-  height: 240px;
+  margin-top: 20px;
+  width: 300px;
+  max-height: 350px;
   display: inline-block;
   text-align: center;
+  vertical-align: top;
   p{
-    font-weight: bold;
     line-height: 20px;
     margin: 8px;
   }
@@ -195,20 +202,34 @@ video{
 }
 
 .tst_img{
-  border-radius: 50px;
+  border-radius: 100px;
   width: 100px;
   height: 100px;
   overflow: hidden;
   margin: 0 auto;
-  background: url("stk_test.jpg") no-repeat center center;
+  background: url("/assets/stock2.jpg") no-repeat center center;
   background-size: cover;
   margin-bottom: 10px;
-
+  border: 3px solid #ccc;
 
   img{
     width: 100%;
   }
 }
+
+.ebenoit{
+  background-image: url("/assets/ebenoit.jpg");
+}
+
+.bmckellick{
+  background-image: url("/assets/bmckellick.jpg");
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 .highlight{
   color: $green;
   position: relative;
@@ -222,4 +243,26 @@ video{
 
 .logo{
   vertical-align: super;
+}
+
+textarea{
+  padding: 5px 10px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 23px;
+  font-family: lato, sans-serif;
+  font-weight: bold;
+}
+
+.notice{
+  height: 40px;
+  background: $blue;
+  color: white;
+  font-size: 21px;
+  line-height: 40px;
+}
+
+.submit:hover{
+  background-color: $blue;
 }

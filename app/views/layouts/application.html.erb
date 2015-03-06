@@ -2,24 +2,39 @@
 <html>
 <head>
   <title>RailsClass</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application' %>
+  <%= javascript_include_tag 'application' %>
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,100,400' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,200' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+
+<h1>
+  <a href="/">
+  <span id="drawing"></span>
+  <span class="logo">
+    <span class="highlight">Rails</span>Class
+  </span>
+  </a>
+</h1>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
 <%= yield %>
 
-<%= stylesheet_link_tag "video-js.min.css" %>
-<%= javascript_include_tag "video.js" %>
-<%= javascript_include_tag "videojs-media-sources.js" %>
-<%= javascript_include_tag "videojs.hls.min.js" %>
-<script>
-  videojs.options.flash.swf = "<%= asset_path('video-js.swf') %>"
-</script>
-
+<% if false %>
+  <%= stylesheet_link_tag "video-js.min.css" %>
+  <%= javascript_include_tag "video.js" %>
+  <%= javascript_include_tag "videojs-media-sources.js" %>
+  <%= javascript_include_tag "videojs.hls.min.js" %>
+  <script>
+    videojs.options.flash.swf = "<%= asset_path('video-js.swf') %>"
+  </script>
+<% end %>
+<%= javascript_include_tag "logo.js" %>
 </body>
 </html>

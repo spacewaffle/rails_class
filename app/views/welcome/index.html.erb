@@ -1,60 +1,7 @@
-
-<h1>
-  <span id="drawing"></span>
-  <script>
-    var draw = SVG('drawing').fixSubPixelOffset().size(55, 78)
-
-    var hex = draw.polygon().ngon({
-               radius: 23 
-             , edges:    6
-             }).move(6, 35).fill({ opacity: 0 }).stroke({ color: 'rgb(99, 236, 167)', opacity: 0, width: 8 })
-    var rail = draw.rect(10, 40).rotate(-50).skew(-50, 0).fill({ color: '#ccc', opacity: 0 }).move(43, 32)
-
-    var cover = draw.polyline('7,26 26,14 45,26').fill('none').stroke({ color: 'rgb(99, 236, 167)', width: 8, opacity: 0 }).move(6, 35)
-
-    var rail2 = draw.rect(10, 40).rotate(50).skew(50, 0).fill({ color: '#ccc', opacity: 0 }).move(21, 2)
-
-    var cover2 = draw.polyline('7,25 26,14').fill('none').move(26, 70).rotate(180).stroke({ color: 'rgb(99, 236, 167)', width: 8, opacity: 0 })
-
-    var drop, raise;
-    drop = function() {
-        setTimeout(function() {
-          rail.animate(500, SVG.easing.swingFromTo).fill({ opacity: 0 }).move(43, 32)
-          setTimeout(function(){
-            rail2.animate(500, SVG.easing.swingFromTo).fill({ opacity: 0 }).move(21, 2)
-          }, 100)
-          setTimeout(function(){
-            hex.animate(500, SVG.easing.swingFromTo).move(6, 25).stroke({ opacity: 0.3 }).after(raise)
-            cover.animate(500, SVG.easing.swingFromTo).move(6, 25).stroke({ opacity: 0.3 }).after(raise)
-            cover2.animate(500, SVG.easing.swingFromTo).move(26, 80).stroke({ opacity: 0 }).after(raise)
-          }, 200)
-        }, 4000)
-      }
-    raise = function() {
-      setTimeout(function() {
-        rail.animate(1000, SVG.easing.swingFromTo).move(43, 21).fill({ opacity: 1 })
-        setTimeout(function(){
-          rail2.animate(1000, SVG.easing.swingFromTo).move(21, -10).fill({ opacity: 1 })
-        }, 100)
-        setTimeout(function(){
-          hex.animate(1000, SVG.easing.swingFromTo).move(6, 15).stroke({ opacity: 1 }).after(drop)
-          cover.animate(1000, SVG.easing.swingFromTo).move(6, 15).stroke({ opacity: 1 }).after(drop)
-          cover2.animate(1000, SVG.easing.swingFromTo).move(26, 90).stroke({ opacity: 1 }).after(drop)
-        }, 200)
-      }, 200);
-    }
-    raise();
-
-  </script>
-  <span class="logo">
-    <span class="highlight">Rails</span>Class
-  </span>
-</h1>
-
 <div class="container">
   <div class="wrapper">
     <h2>10 weeks part-time</h2>
-    <h2>Live experienced instructors</h2>
+    <h2>Experienced instructors</h2>
     <h2>Learn from anywhere</h2>
   </div>
 </div>
@@ -66,7 +13,7 @@
 </div>
 
 
-<input class="btns" type="submit" value="Request Info">
+<a class="btns" href="requests/new">Request Info</a>
 <input class="btns highlight" type="submit" value="Apply Now">
 
 <div class="testimonials">
@@ -74,31 +21,31 @@
   <div class="tst_module">
     <div class="tst_img ebenoit">
     </div>
-    <span>Eric Benoit</span>
-    <p>Jon was a great teacher for Ruby on Rails. He taught the concepts behind the code so you could truly understand how it works. Jon would help guide you to the 'aha' moment instead of directly giving you the answer to what you're currently stuck on. That was an important part of learning for me. </p>
+    <strong>Eric Benoit</strong>
+    <p>Jon was a great teacher for Ruby on Rails. He taught the concepts behind the code so you could truly understand how it works. Jon would help guide you to the 'aha' moment instead of directly giving you the answer to what you're currently stuck on. That was an important part of learning for me.</p>
+  </div>
+  <div class="tst_module">
+    <div class="tst_img bmckellick">
+    </div>
+    <strong>Ben Mckellick</strong>
+    <p>Jon is an extremely approachable instructor who is highly knowledgeable on the subject matter. He can always help and will get you where you need to be.</p>
   </div>
   <div class="tst_module">
     <div class="tst_img">
     </div>
-    <span>Some person</span>
+    <strong>Evan B</strong>
+    <p>I took a back end web development course with Jon, and he's just what you'd want in an instructor - knowledgable, patient, teaches by example. I went from no foundation in Rails at all to being able to build pretty complex apps in not much more than a few weeks.</p>
+  </div>
+  <div class="tst_module">
+    <div class="tst_img">
+    </div>
+    <strong>Some person</strong>
     <p>RailsClass made me a millionaire! Thanks RailsClass!</p>
   </div>
   <div class="tst_module">
     <div class="tst_img">
     </div>
-    <span>Some person</span>
-    <p>RailsClass made me a millionaire! Thanks RailsClass!</p>
-  </div>
-  <div class="tst_module">
-    <div class="tst_img">
-    </div>
-    <span>Some person</span>
-    <p>RailsClass made me a millionaire! Thanks RailsClass!</p>
-  </div>
-  <div class="tst_module">
-    <div class="tst_img">
-    </div>
-    <span>Some person</span>
+    <strong>Some person</strong>
     <p>RailsClass made me a millionaire! Thanks RailsClass!</p>
   </div>
 </div>
