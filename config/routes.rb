@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :apps
 
   resources :requests, only: [:new, :create]
   resources :apps, only: [:new, :create]
