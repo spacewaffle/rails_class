@@ -13,5 +13,13 @@
 
 <%= yield %>
 
+<%= stylesheet_link_tag "video-js.min.css" %>
+<%= javascript_include_tag "video.js" %>
+<%= javascript_include_tag "videojs-media-sources.js" %>
+<%= javascript_include_tag "videojs.hls.min.js" %>
+<script>
+  videojs.options.flash.swf = "<%= asset_path('video-js.swf') %>"
+</script>
+
 </body>
 </html>

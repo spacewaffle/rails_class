@@ -28,7 +28,7 @@
             cover.animate(500, SVG.easing.swingFromTo).move(6, 25).stroke({ opacity: 0.3 }).after(raise)
             cover2.animate(500, SVG.easing.swingFromTo).move(26, 80).stroke({ opacity: 0 }).after(raise)
           }, 200)
-        }, 7000)
+        }, 4000)
       }
     raise = function() {
       setTimeout(function() {
@@ -72,10 +72,10 @@
 <div class="testimonials">
   <h3>What our <wbr>students are saying</h3>
   <div class="tst_module">
-    <div class="tst_img">
+    <div class="tst_img ebenoit">
     </div>
-    <span>Some person</span>
-    <p>RailsClass made me a millionaire! Thanks RailsClass!</p>
+    <span>Eric Benoit</span>
+    <p>Jon was a great teacher for Ruby on Rails. He taught the concepts behind the code so you could truly understand how it works. Jon would help guide you to the 'aha' moment instead of directly giving you the answer to what you're currently stuck on. That was an important part of learning for me. </p>
   </div>
   <div class="tst_module">
     <div class="tst_img">
@@ -102,3 +102,13 @@
     <p>RailsClass made me a millionaire! Thanks RailsClass!</p>
   </div>
 </div>
+
+<video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+  controls preload="auto" width="640" height="264"
+  data-setup='{"example_option":true}'>
+  <source
+       src="  
+https://s3-us-west-2.amazonaws.com/railsclassout/hls_2m.m3u8"
+       type="application/x-mpegURL">
+ <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+</video>
