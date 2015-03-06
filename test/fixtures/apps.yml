@@ -3,7 +3,23 @@
 one:
   email: MyText
   name: MyText
+  date: MyText
+  employment: MyText
+  currently: MyText
+  looking_for: MyText
+  experience: MyText
+  ideas: MyText
+  linkedin: MyText
+  heard_from: MyText
 
 two:
   email: MyText
   name: MyText
+  date: MyText
+  employment: MyText
+  currently: MyText
+  looking_for: MyText
+  experience: MyText
+  ideas: MyText
+  linkedin: MyText
+  heard_from: MyText

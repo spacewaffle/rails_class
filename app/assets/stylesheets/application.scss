@@ -266,3 +266,31 @@ textarea{
 .submit:hover{
   background-color: $blue;
 }
+
+.hero_btn{
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
+.new_app{
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 50px;
+  textarea, select{
+    margin: 15px auto 30px;
+    display: block;
+    font-size: 18px;
+    width: 215px;
+    line-height: 28px;
+  }
+  .field{
+    margin-top: 20px;
+  }
+}
+
+textarea.lg{
+  height: 200px;
+}
+textarea.md{
+  height: 100px;
+}

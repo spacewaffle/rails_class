@@ -1,0 +1,75 @@
+<%= form_for(@app) do |f| %>
+  <% if @app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@app.errors.count, "error") %> prohibited this app from being saved:</h2>
+
+      <ul>
+      <% @app.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_area :name, placeholder: "Full Name" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :email, placeholder: "Email" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :date, placeholder: "When can you start?", class: "md" %>
+  </div>
+  <div class="field">
+    <div>
+    <%= f.label :employment, "What best describes your current employment status?" %> 
+    </div>
+    <%= f.select :employment, options_for_select([
+      "Employed", 
+      "Unemployed but not looking", 
+      "Unemployed and looking for work",
+      "Self Employed (freelancer)",
+      "Entrepreneur (starting/growing a business)",
+      "Student"]) %>
+  </div>
+  <div class="field">
+    <div>
+      <%= f.label :currently, "Tell us a little bit about what you're currently working on." %>
+    </div>
+    
+    <%= f.text_area :currently, class: "lg" %>
+  </div>
+  <div class="field">
+    <div>
+      <%= f.label :looking_for, "What are you looking to get from this course?" %>
+    </div>
+    <%= f.text_area :looking_for, class: "md" %>
+  </div>
+  <div class="field">
+    <div>
+      <%= f.label :experience, "Do you have prior front end or back end experience?", class: "md" %>
+    </div>
+    <%= f.text_area :experience, placeholder: "" %>
+  </div>
+  <div class="field">
+    <div>
+      <%= f.label :ideas, "Do you have an idea for a website you've always wanted to build?" %>
+    </div>
+    <%= f.text_area :ideas, placeholder: "" %>
+  </div>
+  <div class="field">
+    <div>
+      <%= f.label :linkedin, "Please enter the link to your LinkedIn profile:" %>
+    </div>
+    <%= f.text_area :linkedin, placeholder: "" %>
+  </div>
+  <div class="field">
+    <div>
+      <%= f.label :heard_from, "How did you hear about us?" %>
+    </div>
+    <%= f.text_area :heard_from, class: "md" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit Application", class: "btns submit" %>
+  </div>
+<% end %>
