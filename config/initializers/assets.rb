@@ -10,4 +10,5 @@ Rails.application.config.assets.precompile += %w( video.js
   videojs-media-sources.js
   videojs.hls.min.js
   video-js.swf
-  logo.js )
+  logo.js
+  scroll.js )
