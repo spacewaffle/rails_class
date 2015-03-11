@@ -57,12 +57,15 @@ body{
   text-align: center;
 }
 h1{
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: white;
   font-size: 50px;
   font-weight: bold;
   text-align: center;
   color: black;
-  margin: 20px 0;
+  padding-bottom: 15px;
   font-family: "lato", sans-serif;
   white-space:nowrap;
 }
@@ -75,15 +78,12 @@ h2{
 
 .container{
   position: absolute;
-  top: 90px;
   width: 100%;
   margin: 0 auto;
   color: white;
-  padding-top: 50px;
 }
 .wrapper{
   position: absolute;
-  top: 50%;
   left: 50%;
   margin: 95px 0 0 -290px;
   width: 580px;
@@ -92,21 +92,37 @@ h2{
 }
 
 
+video{
+  position: relative;
+  top: -30%;
+  min-width: 100%;
+  min-height: 400px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1124px){
+  .container{
+    margin-top: 40px;
+  }
+  video{
+    top: -20%;
+  }
+}
 @media (max-width: 700px){
   .container{
     position: absolute;
-    top: 183px;
     width: 100%;
-    margin: 0 auto;
     color: white;
-     padding-top: 0; 
-     padding-left: 0; 
+    padding-top: 0; 
+    padding-left: 0; 
   }
   .wrapper{
     position: static; 
     top: 0; 
     left: 0; 
-    margin: 20px auto 0; 
+    margin: 90px auto 0; 
     width: 96%; 
     height: 100%; 
     text-align: center; 
@@ -127,7 +143,7 @@ h2{
 
 .video_container{
   position: relative;
-  /*top: -92px;*/
+  margin-top: 84px;
   width: 100%;
   background-color: #000;
   z-index: -1;
@@ -135,15 +151,6 @@ h2{
   height: 400px;
 }
 
-video{
-  position: relative;
-  top: -30%;
-  min-width: 100%;
-  min-height: 400px;
-  opacity: 0.5;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
 
 @media (max-width: 920px){
   video{
@@ -239,6 +246,11 @@ video{
   background-image: url("/assets/scummins.jpg");
 }
 
+.aperez{
+  background: black;
+  background-image: url("/assets/aperez.jpg");
+}
+
 .highlight{
   color: $green;
   position: relative;
@@ -278,7 +290,7 @@ textarea{
 
 .hero_btn{
   margin-top: 35px;
-  margin-bottom: 30px;
+  display: inline-block;
 }
 
 .new_app{
@@ -302,4 +314,30 @@ textarea.lg{
 }
 textarea.md{
   height: 100px;
+}
+
+.nav_link{
+  position: relative;
+  font-size: 25px;
+  top: 0px;
+  padding: 10px 3px 5px;
+  transition: top 0.2s;
+  margin: 0 2px;
+  font-weight: bold;
+}
+
+.nav_link:hover{
+  color: $blue;
+  border-bottom: 1px solid $blue;
+  font-weight: bold;
+  top: -5px;
+}
+
+
+@media(min-width: 1125px){
+  nav {
+    position: absolute;
+    right: 40px;
+    top: 13px;
+  }
 }
