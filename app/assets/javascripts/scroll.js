@@ -12,7 +12,7 @@ $(function(){
                   
                     var avail = $(document).height() - $(window).height();
 
-                    scroll = target.offset().top;
+                    scroll = target.offset().top - 70;
                   
                     if (scroll > avail) {
                         scroll = avail;
@@ -24,7 +24,7 @@ $(function(){
                     }).data("transitioning", true);
                 } else {
                     $("html, body").animate({
-                        scrollTop: scroll
+                        scrollTop: scroll - 70
                     }, 1000);
                     return;
                 }
