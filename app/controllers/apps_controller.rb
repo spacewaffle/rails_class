@@ -15,6 +15,7 @@ class AppsController < ApplicationController
   # GET /apps/new
   def new
     @app = App.new
+    render layout: "short_form"
   end
 
   # GET /apps/1/edit

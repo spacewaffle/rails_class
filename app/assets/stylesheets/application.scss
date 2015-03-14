@@ -89,7 +89,7 @@ body{
   position: relative;
   margin-top: 99px;
   padding-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 h1{
@@ -113,7 +113,7 @@ header{
   border-bottom: 5px solid $green;
 }
 h2{
-  font-weight: normal;
+  font-weight: bold;
   font-size: 50px;
   margin-bottom: 20px;
   font-family: "lato", sans-serif;
@@ -124,12 +124,14 @@ h2{
   width: 100%;
   margin: 0 auto;
   color: white;
+  h2{
+    font-weight: normal;
+  }
 }
 .wrapper{
   position: absolute;
   left: 50%;
-  margin: 95px 0 0 -290px;
-  width: 580px;
+  margin: 95px 0 0 -205px;
   height: 190px;
   text-align: left;
 }
@@ -212,11 +214,11 @@ video{
   color: black;
   font-size: 40px;
   font-weight: bold;
-  padding: 10px 15px;
-  margin: 20px 10px 0;
   position: relative;
   top: 0;
+  padding: 10px 15px;
   border-radius: 5px;
+  display: inline-block;
   transition: top 0.3s, background-color 0.2s, color 0s;
 }
 
@@ -227,6 +229,10 @@ video{
   box-shadow: 0px 2px 2px rgb(127, 124, 124);
 }
 
+.hero_btn{
+  margin-top: 35px;
+  margin: 20px 10px 0;
+}
 
 .testimonials{
   max-width: 1100px;
@@ -339,11 +345,6 @@ textarea{
   background-color: $blue;
 }
 
-.hero_btn{
-  margin-top: 35px;
-  display: inline-block;
-}
-
 .new_app{
   text-align: center;
   padding: 20px;
@@ -382,12 +383,6 @@ textarea.md{
   border-bottom: 1px solid $blue;
   font-weight: bold;
   top: -5px;
-}
-
-@media (max-width: 500px){
-  .nav_link{
-    font-size: 20px;
-  }
 }
 
 @media(min-width: 1125px){
@@ -470,4 +465,60 @@ textarea.md{
 
 .module_title{
   font-weight: bold;
+}
+
+.schedule{
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0 0;
+  
+  h4{
+    text-align: left;
+    font-weight: normal;
+    margin-left: 30px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  p{
+    text-align: left;
+    margin: 0 0 15px 30px;
+    line-height: 20px;
+    font-size: 15px;
+  }
+}
+.unit_header{
+  text-align: left;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 20px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.col2{
+  float: left;
+  width: 40%;
+  margin-bottom: 40px;
+}
+.col2:first-child{
+  margin-left: 10%;
+}
+
+@media (max-width: 700px){
+  .col2{
+    float: none;
+    display: block;
+    width: 100%;
+  }
+  .col2:first-child{
+    margin-left: 0;
+  }
+}
+
+.final{
+  margin-top: 40px;
+  #price div{
+    margin: 10px 0;
+  }
 }
