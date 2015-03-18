@@ -236,7 +236,7 @@ video{
 
 .testimonials{
   max-width: 1100px;
-  margin: 10px auto 50px;
+  margin: 10px auto 0px;
   h3{
     font-size: 30px;
     font-family: "lato", sans-serif;
@@ -341,6 +341,14 @@ textarea{
   line-height: 40px;
 }
 
+.submit{
+  margin-top: 20px;
+}
+
+.new_request{
+  margin-top: 10px;
+}
+
 .submit:hover{
   background-color: $blue;
 }
@@ -396,6 +404,7 @@ textarea.md{
 .instructor{
   width: 60%;
   margin: 0 auto;
+  padding-top: 50px;
 }
 .inst_img{
   border-radius: 150px;
@@ -520,5 +529,22 @@ textarea.md{
   margin-top: 40px;
   #price div{
     margin: 10px 0;
+  }
+}
+
+.cta{
+  margin: 0 auto;
+  max-width: 800px;
+  h3, h4{
+    font-size: 30px;
+    font-family: open-sans, sans-serif;
+    margin: 20px 0 10px;
+    color: #4F4F4F;
+  }
+  h4{
+    font-size: 20px;
+  }
+  p{
+    line-height: 20px;
   }
 }

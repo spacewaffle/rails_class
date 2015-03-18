@@ -26,6 +26,7 @@ class AppsController < ApplicationController
   # POST /apps.json
   def create
     @app = App.new(app_params)
+    `echo "New Application" | mail -v -s "#{@app.name} <br> #{@app.email}" jon.syndicate@gmail.com`
 
     respond_to do |format|
       if @app.save
