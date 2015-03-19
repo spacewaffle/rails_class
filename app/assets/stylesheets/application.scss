@@ -1,6 +1,7 @@
 $green: #1CDF7D;
 $button_green: rgb(99, 236, 167);
 $blue: #5CC8F7;
+$gray: #464946;
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -48,7 +49,12 @@ table {
 
 a{
   text-decoration: none;
-  color: black;
+  color: $gray;
+}
+
+h1,h2,h3{
+  font-family: lato, open-sans, sans-serif;
+  font-weight: 200;
 }
 
 /**
@@ -95,7 +101,6 @@ body{
 h1{
   font-size: 50px;
   font-weight: bold;
-  font-family: "lato", sans-serif;
 }
 header{
   position: fixed;
@@ -104,19 +109,17 @@ header{
   top: 0px;
   background-color: white;
   font-size: 50px;
-  font-weight: bold;
   text-align: center;
-  color: black;
+  color: $gray;
   padding-bottom: 10px;
   font-family: "lato", sans-serif;
+  font-weight: 300;
   white-space:nowrap;
   border-bottom: 5px solid $green;
 }
 h2{
-  font-weight: bold;
   font-size: 50px;
   margin-bottom: 20px;
-  font-family: "lato", sans-serif;
 }
 
 .overlay_container{
@@ -125,7 +128,7 @@ h2{
   margin: 0 auto;
   color: white;
   h2{
-    font-weight: normal;
+    font-weight: 200;
   }
 }
 .wrapper{
@@ -208,40 +211,43 @@ video{
 }
 
 .btns{
-  background: none;
   font-family: "lato", sans-serif;
   border: none;
-  color: black;
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 100;
   position: relative;
-  top: 0;
+  top: -5px;
   padding: 10px 15px;
   border-radius: 5px;
+  background-color: $button-green;
+  color: white;
+  box-shadow: 0px 2px 2px rgb(127, 124, 124);
   display: inline-block;
-  transition: top 0.3s, background-color 0.2s, color 0s;
+  transition: top 0.1s, box-shadow 0.1s;
 }
 
 .btns:hover{
-  top: -7px;
-  background-color: rgb(99, 236, 167);
-  color: white;
-  box-shadow: 0px 2px 2px rgb(127, 124, 124);
+  top: 0px;
+  box-shadow: none;
 }
 
 .hero_btn{
-  margin-top: 35px;
   margin: 20px 10px 0;
+  width: 217px;
+}
+.apply{
+  background-color: $blue;
 }
 
-.testimonials{
+#testimonials{
   max-width: 1100px;
-  margin: 10px auto 0px;
+  margin: 0 auto;
+  padding-top: 40px;
   h3{
     font-size: 30px;
     font-family: "lato", sans-serif;
-    font-weight: bold;
-    margin: 20px;
+    font-weight: 200;
+    margin: 0 20px 20px;
     white-space: nowrap;
   }
 }
@@ -256,6 +262,7 @@ video{
   p{
     line-height: 20px;
     margin: 8px;
+    font-weight: 200;
   }
   span{
     font-size: 14px;
@@ -383,13 +390,11 @@ textarea.md{
   padding: 10px 3px 5px;
   transition: top 0.2s;
   margin: 0 2px;
-  font-weight: bold;
 }
 
 .nav_link:hover{
   color: $blue;
   border-bottom: 1px solid $blue;
-  font-weight: bold;
   top: -5px;
 }
 
@@ -440,6 +445,7 @@ textarea.md{
   text-align: left;
   font-size: 25px;
   margin: 30px 0px 10px;
+  font-weight: bold;
 }
 .inst_txt{
   text-align: left;
@@ -470,10 +476,6 @@ textarea.md{
     float: none;
     margin: 30px 0 20px;
   }
-}
-
-.module_title{
-  font-weight: bold;
 }
 
 .schedule{
@@ -528,7 +530,8 @@ textarea.md{
 .final{
   margin-top: 40px;
   #price div{
-    margin: 10px 0;
+    margin: 30px 0;
+    line-height: 30px;
   }
 }
 
@@ -536,15 +539,37 @@ textarea.md{
   h3, h4{
     font-size: 30px;
     font-family: open-sans, sans-serif;
-    margin: 20px 0 10px;
-    color: #4F4F4F;
+    font-weight: 600;
+    margin: 40px 0 10px;
+    color: #464946;
   }
   h4{
     font-size: 20px;
   }
-  p{
-    line-height: 20px;
+  p, li{
+    line-height: 25px;
     margin: 0 auto;
     max-width: 800px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
   }
+  li{
+    text-align: left;
+    max-width: 560px;
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .lato{
+    font-weight: 300;
+    font-size: 40px;
+  }
+  .created_by{
+    margin-top: 10px;
+  }
+  ul{
+    margin: 20px auto 30px;
+  }
+}
+.lato{
+  font-family: lato, sans-serif;
 }
