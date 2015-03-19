@@ -533,8 +533,6 @@ textarea.md{
 }
 
 .cta{
-  margin: 0 auto;
-  max-width: 800px;
   h3, h4{
     font-size: 30px;
     font-family: open-sans, sans-serif;
@@ -546,5 +544,7 @@ textarea.md{
   }
   p{
     line-height: 20px;
+    margin: 0 auto;
+    max-width: 800px;
   }
 }
