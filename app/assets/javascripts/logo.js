@@ -1,3 +1,5 @@
+if(document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")){
+// if(false){
 var draw = SVG('drawing').fixSubPixelOffset().size(55, 78);
 
 var hex = draw.polygon().ngon({
@@ -40,3 +42,7 @@ raise = function() {
   }, 200);
 };
 raise();
+}
+else{
+  $('#drawing').append("<img src='assets/logo-short.png' alt='' />");
+}

@@ -494,13 +494,22 @@ textarea.md{
   h2{
     font-weight: 300;
   }
-  p{
+  p, li{
     text-align: left;
     margin: 10px 0 15px 30px;
     line-height: 23px;
     font-size: 17px;
     letter-spacing: 0.5px;
     color: rgb(93, 93, 93);
+  }
+  li{
+    margin-left: 60px;
+  }
+  a{
+    color: $green;
+  }
+  a:hover{
+    text-decoration: underline;
   }
 }
 .unit_header{
