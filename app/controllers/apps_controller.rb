@@ -15,7 +15,7 @@ class AppsController < ApplicationController
   # GET /apps/new
   def new
     @app = App.new
-    render layout: "short_form"
+    @hide_nav = true
   end
 
   # GET /apps/1/edit

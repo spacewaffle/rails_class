@@ -4,6 +4,6 @@ class WelcomeController < ApplicationController
   end
 
   def syllabus
-    render layout: "short_form"
+    @hide_nav = true
   end
 end

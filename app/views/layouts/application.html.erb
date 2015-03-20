@@ -7,7 +7,7 @@
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,100,200,300,400,500,600,800' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="assets/favicon.ico?v=1.2"  type="image/x-icon" >
+  <%= favicon_link_tag  "favicon.ico" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,11 +20,13 @@
     <span class="highlight">Rails</span>Class
   </span>
   </a>
-  <nav>
-    <a class="nav_link" href="/#testimonials">Testimonials</a>
-    <a class="nav_link" href="/#instructor">Instructor</a>
-    <a class="nav_link" href="/#price">Price</a>
-  </nav>
+  <% if !@hide_nav %>
+    <nav>
+      <a class="nav_link" href="/#testimonials">Testimonials</a>
+      <a class="nav_link" href="/#instructor">Instructor</a>
+      <a class="nav_link" href="/#price">Price</a>
+    </nav>
+  <% end %>
   <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
