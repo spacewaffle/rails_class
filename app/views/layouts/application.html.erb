@@ -24,12 +24,12 @@
     <a class="nav_link" href="/#instructor">Instructor</a>
     <a class="nav_link" href="/#price">Price</a>
   </nav>
-</header>
-
-<div class="container">
   <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
+</header>
+
+<div class="container">
   <%= yield %>
 </div>
 

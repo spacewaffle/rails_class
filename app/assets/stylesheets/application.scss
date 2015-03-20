@@ -335,9 +335,9 @@ textarea{
   height: 30px;
   border-radius: 5px;
   margin: 10px;
-  font-size: 23px;
+  font-size: 20px;
   font-family: lato, sans-serif;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .notice{
@@ -346,6 +346,8 @@ textarea{
   color: white;
   font-size: 21px;
   line-height: 40px;
+  position: relative;
+  top: 15px;
 }
 
 .submit{
@@ -360,6 +362,12 @@ textarea{
   background-color: $blue;
 }
 
+.new_request{
+  textarea{
+    width: 350px;
+  }
+}
+
 .new_app{
   text-align: center;
   padding: 20px;
@@ -368,7 +376,7 @@ textarea{
     margin: 15px auto 30px;
     display: block;
     font-size: 18px;
-    width: 215px;
+    width: 315px;
     line-height: 28px;
   }
   .field{
