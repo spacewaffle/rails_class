@@ -356,6 +356,12 @@ textarea{
 
 .new_request{
   margin-top: 10px;
+  p{
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 20px;
+
+  }
 }
 
 .submit:hover{
@@ -501,6 +507,7 @@ textarea.md{
   }
   h2{
     font-weight: 300;
+    margin-top: 40px;
   }
   p, li{
     text-align: left;

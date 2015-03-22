@@ -1,4 +1,8 @@
 <%= form_for(@request) do |f| %>
+
+  <p>
+    We'll give you our syllabus, contact information and payment policy. We'll also give you a point of contact in case you have more questions about the class and how we compare to other tech education programs in Boston.
+  </p>
   <% if @request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>

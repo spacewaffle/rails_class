@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'efQ9' => 'welcome#syllabus'
 
+  get 'prework' => "welcome#prework"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
