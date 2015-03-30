@@ -1,0 +1,44 @@
+#!/bin/bash
+
+
+# remember to run chmod +x quick_deploy.sh before using this each time
+
+printf "\n********************\n"
+printf "pulling from github"
+printf "\n********************\n"
+git stash
+git pull
+
+chmod +x quick_deploy.sh
+
+printf "\n********************\n"
+printf "bundling"
+printf "\n********************\n"
+bundle install --without development test
+
+printf "\n********************\n"
+printf "precompiling assets"
+printf "\n********************\n"
+
+RAILS_ENV=production rake assets:precompile
+
+printf "\n********************\n"
+printf "killing rails server"
+printf "\n********************\n"
+pkill -f rails
+
+
+printf "\n********************\n"
+printf "running new migrations"
+printf "\n********************\n"
+
+RAILS_ENV=production rake db:migrate
+
+printf "\n********************\n"
+printf "starting new rails server"
+printf "\n********************\n"
+nohup rails s -e production &
+
+printf "\n********************\n"
+printf "Done!"
+printf "\n********************\n"
