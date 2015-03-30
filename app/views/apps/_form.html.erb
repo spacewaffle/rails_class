@@ -17,6 +17,7 @@
   <div class="field">
     <%= f.text_area :email, placeholder: "Email" %>
   </div>
+  <% if false %>
   <div class="field">
     <%= f.text_area :date, placeholder: "When can you start?", class: "md" %>
   </div>
@@ -63,6 +64,7 @@
     </div>
     <%= f.text_area :linkedin, placeholder: "" %>
   </div>
+  <% end %>
   <div class="field">
     <div>
       <%= f.label :heard_from, "How did you hear about us?" %>
@@ -70,6 +72,6 @@
     <%= f.text_area :heard_from, class: "md" %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit Application", class: "btns submit" %>
+    <%= f.submit "Get In Touch", class: "btns submit" %>
   </div>
 <% end %>

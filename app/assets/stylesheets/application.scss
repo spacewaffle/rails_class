@@ -352,6 +352,7 @@ textarea{
 
 .submit{
   margin-top: 20px;
+  background-color: $blue;
 }
 
 .new_request{
@@ -613,5 +614,48 @@ textarea.md{
   h3{
     font-size: 30px;
     font-weight: 300;
+  }
+}
+
+
+.comparison{
+  table{
+    text-align: center;
+    margin: 0 auto;
+  }
+  td{
+    border: 1px solid #ccc;
+    padding: 10px;
+    vertical-align: middle;
+  }
+  thead tr:first-child td{
+    border-top: none; 
+    border-left: none; 
+    border-right: none; 
+  }
+  td:first-child{
+    font-weight: bold; 
+  }
+  td.rails-class{
+    border-left: 3px solid #555;
+    border-right: 3px solid #555;
+  }
+  .rails-class.first{
+    border-top: 3px solid #555;
+  }
+  .rails-class.last{
+    border-bottom: 3px solid #555;
+  }
+  img{
+    height: 70px;
+  }
+  .fa{
+    font-size: 25px;
+  }
+  .fa-check{
+    color: $green;
+  }
+  .fa-times{
+    color: red;
   }
 }
