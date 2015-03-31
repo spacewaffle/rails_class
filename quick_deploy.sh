@@ -23,10 +23,9 @@ printf "\n********************\n"
 RAILS_ENV=production rake assets:precompile
 
 printf "\n********************\n"
-printf "killing rails server"
+printf "killing rails server on port 3001"
 printf "\n********************\n"
-pkill -f rails
-
+kill -9 $(lsof -w -n -i tcp:3001 |awk '{print $2}' |grep -v PID)
 
 printf "\n********************\n"
 printf "running new migrations"
@@ -35,9 +34,9 @@ printf "\n********************\n"
 RAILS_ENV=production rake db:migrate
 
 printf "\n********************\n"
-printf "starting new rails server"
+printf "starting new rails server on port 3001"
 printf "\n********************\n"
-nohup rails s -e production &
+nohup rails s -e production -p 3001 &
 
 printf "\n********************\n"
 printf "Done!"
