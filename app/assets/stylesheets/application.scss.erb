@@ -275,7 +275,7 @@ video{
   height: 100px;
   overflow: hidden;
   margin: 0 auto;
-  background: url("/assets/stock2.jpg") no-repeat center center;
+  background: url("<%= asset_path 'stock2.jpg' %>") no-repeat center center;
   background-size: cover;
   margin-bottom: 10px;
   border: 3px solid #ccc;
@@ -286,11 +286,11 @@ video{
 }
 
 .ebenoit{
-  background-image: url("/assets/ebenoit.jpg");
+  background-image: url("<%= asset_path 'ebenoit.jpg' %>");
 }
 
 .bmckellick{
-  background-image: url("/assets/bmckellick.jpg");
+  background-image: url("<%= asset_path 'bmckellick.jpg' %>");
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -299,20 +299,20 @@ video{
 }
 
 .lkaiser{
-  background-image: url("/assets/lkaiser.jpg");
+  background-image: url("<%= asset_path 'lkaiser.jpg' %>");
 }
 
 .scummins{
-  background-image: url("/assets/scummins.jpg");
+  background-image: url("<%= asset_path 'scummins.jpg' %>");
 }
 
 .aperez{
   background: black;
-  background-image: url("/assets/aperez.jpg");
+  background-image: url("<%= asset_path 'aperez.jpg' %>");
 }
 
 .dmarkowitz{
-  background-image: url("/assets/dmarkowitz.jpg");
+  background-image: url("<%= asset_path 'dmarkowitz.jpg' %>");
 }
 
 .highlight{
@@ -430,7 +430,7 @@ textarea.md{
   border-radius: 150px;
   width: 150px;
   height: 150px;
-  background: url("/assets/jcheng.jpg") no-repeat center center;
+  background: url("<%= asset_path 'jcheng.jpg' %>") no-repeat center center;
   background-size: cover;
   margin: 0 25px 10px 0px;
   border: 3px solid white;
