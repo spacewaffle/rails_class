@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require windows_fix.js
 //= require svg.min.js
 //= require svg.easing.min.js
 //= require svg.shapes.min.js

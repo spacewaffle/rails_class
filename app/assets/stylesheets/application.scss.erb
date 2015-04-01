@@ -54,6 +54,10 @@ a{
 
 h1,h2,h3{
   font-family: lato, 'Open Sans', sans-serif;
+  font-weight: 200;
+}
+
+.windows h1,.windows h2,.windows h3{
   font-weight: 300;
 }
 
@@ -128,8 +132,11 @@ h2{
   margin: 0 auto;
   color: white;
   h2{
-    font-weight: 300;
+    font-weight: 100;
   }
+}
+.windows .overlay_container h2{
+  font-weight: 300;
 }
 .wrapper{
   position: absolute;
@@ -214,7 +221,7 @@ video{
   font-family: "lato", sans-serif;
   border: none;
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 100;
   position: relative;
   top: -5px;
   padding: 10px 15px;
@@ -224,6 +231,9 @@ video{
   box-shadow: 0px 2px 2px rgb(127, 124, 124);
   display: inline-block;
   transition: top 0.1s, box-shadow 0.1s;
+}
+.windows .btns{
+  font-weight: 300;
 }
 
 .btns:hover{
@@ -259,14 +269,20 @@ video{
   text-align: center;
   vertical-align: top;
   p{
-    line-height: 22px;
+    line-height: 20px;
     margin: 8px;
-    font-weight: 400;
-    font-size: 15px;
+    font-weight: 300;
   }
   span{
     font-size: 14px;
   }
+}
+
+.windows .tst_module p{
+  line-height: 22px;
+  margin: 8px;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .tst_img{
@@ -582,7 +598,7 @@ textarea.md{
     line-height: 25px;
     margin: 0 auto;
     max-width: 800px;
-    font-weight: 400;
+    font-weight: 100;
     letter-spacing: 0.5px;
   }
   li{
@@ -601,6 +617,10 @@ textarea.md{
   ul{
     margin: 20px auto 30px;
   }
+}
+
+.windows .cta p, .windows .cta li{
+  font-weight: 400;
 }
 .lato{
   font-family: lato, sans-serif;
