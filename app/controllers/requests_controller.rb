@@ -26,7 +26,7 @@ class RequestsController < ApplicationController
   # POST /requests.json
   def create
     @request = Request.new(request_params)
-    IO.popen(["mail", "-v", "-s", "New Info Request", "jon.syndicate@gmail.com"], "w") {|f|
+    IO.popen(["mail", "-s", "New Info Request", "jon.syndicate@gmail.com"], "w") {|f|
       f.puts @request.name;
       f.puts @request.email;
       f.close_write;
