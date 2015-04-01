@@ -26,11 +26,11 @@ class RequestsController < ApplicationController
   # POST /requests.json
   def create
     @request = Request.new(request_params)
-    IO.popen(["mail", "-v", "-s", "New Info Request", "jon.syndicate@gmail.com"], "w") {|f|
-      f.puts @request.name;
-      f.puts @request.email;
-      f.close_write;
-    }
+    # IO.popen(["mail", "-v", "-s", "New Info Request", "jon.syndicate@gmail.com"], "w") {|f|
+    #   f.puts @request.name;
+    #   f.puts @request.email;
+    #   f.close_write;
+    # }
     respond_to do |format|
       if @request.save
         format.html { redirect_to root_path, notice: "Great, we'll be in touch soon!" }
