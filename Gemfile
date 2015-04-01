@@ -19,6 +19,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'rails_admin'
 
+gem 'thin'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
