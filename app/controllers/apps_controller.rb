@@ -26,19 +26,19 @@ class AppsController < ApplicationController
   # POST /apps.json
   def create
     @app = App.new(app_params)
-    # IO.popen(["mail", "-v", "-s", "New Application request", "jon.syndicate@gmail.com"], "w") {|f|
-    #   f.puts @app.name;
-    #   f.puts @app.email;
-    #   f.puts @app.date;
-    #   f.puts @app.employment;
-    #   f.puts @app.currently;
-    #   f.puts @app.looking_for;
-    #   f.puts @app.experience;
-    #   f.puts @app.ideas;
-    #   f.puts @app.linkedin;
-    #   f.puts @app.heard_from;
-    #   f.close_write;
-    # }
+    IO.popen(["mail", "-v", "-s", "New Application request", "jon.syndicate@gmail.com"], "w") {|f|
+      f.puts @app.name;
+      f.puts @app.email;
+      f.puts @app.date;
+      f.puts @app.employment;
+      f.puts @app.currently;
+      f.puts @app.looking_for;
+      f.puts @app.experience;
+      f.puts @app.ideas;
+      f.puts @app.linkedin;
+      f.puts @app.heard_from;
+      f.close_write;
+    }
     respond_to do |format|
       if @app.save
         format.html { redirect_to root_path, notice: "A lovely application! We'll be in touch soon!" }
