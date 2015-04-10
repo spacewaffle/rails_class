@@ -26,9 +26,24 @@ class AppsController < ApplicationController
   # POST /apps.json
   def create
     @app = App.new(app_params)
-    IO.popen(["mail", "-s", "New Application request", "jon.syndicate@gmail.com"], "w") {|f|
+    IO.popen(["mail", "-s", "New Application request", "jon@railsclass.com"], "w") {|f|
       f.puts @app.name;
       f.puts @app.email;
+      f.puts @app.phone;
+      f.puts @app.date;
+      f.puts @app.employment;
+      f.puts @app.currently;
+      f.puts @app.looking_for;
+      f.puts @app.experience;
+      f.puts @app.ideas;
+      f.puts @app.linkedin;
+      f.puts @app.heard_from;
+      f.close_write;
+    }
+    IO.popen(["mail", "-s", "New Application request", "celia@railsclass.com"], "w") {|f|
+      f.puts @app.name;
+      f.puts @app.email;
+      f.puts @app.phone;
       f.puts @app.date;
       f.puts @app.employment;
       f.puts @app.currently;
