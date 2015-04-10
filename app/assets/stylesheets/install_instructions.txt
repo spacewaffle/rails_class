@@ -1,0 +1,70 @@
+
+Installation Instructions
+
+Note: Text that looks like this should be entered in the Terminal application. It can be found in Application/Utilities.
+
+You’ll also need to signup with a Github account before starting these installation instructions
+
+MAC USERS
+
+1. Make sure you have an Apple ID (you should already have one). 
+2. Install Command Line Tools
+  • https://developer.apple.com/downloads/index.action
+  • Search for "Command Line Tools" and select the version appropriate for your operating system.
+  • Install the Command Line Tools from the downloaded file.
+3. Install Homebrew
+  • ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  • The install page if you have trouble: http://mxcl.github.io/homebrew/
+4. Install git
+  • brew update
+  • brew install git
+5. Configure git with your name and email
+  • https://help.github.com/articles/setting-your-email-in-git
+  • https://help.github.com/articles/setting-your-username-in-git
+6. Install RVM with Ruby 2.0.0
+  • \curl -L https://get.rvm.io | bash -s stable --ruby
+  • rvm use 2.0.0 --default
+7. Restart Terminal
+8. Make sure the latest versions of RVM and Ruby were installed
+  • rvm –v  (You should get rvm 1.0.0 or higher)
+  • ruby –v (You should get ruby 2.0.0p0 or higher)
+
+
+UBUNTU USERS
+
+  • Open a Terminal window
+  • http://askubuntu.com/questions/196212/how-do-you-open-a-command-line
+  • Install git
+  • sudo apt-get install build-essential git-core
+  • Configure git with your name and email
+  • https://help.github.com/articles/setting-your-email-in-git
+  • https://help.github.com/articles/setting-your-username-in-git
+  • Install curl
+  • sudo apt-get install curl
+  • Follow Steps 6, 7, and 8 in the Mac section above.
+
+WINDOWS USERS
+
+1.Install Rails installer
+  • http://railsinstaller.org/en
+  • Click through the installer until it finishes
+2. Make sure the latest versions of Ruby was installed
+  • Open start menu > All Programs >Rails Installer > Command Prompt with Ruby and Rails
+  • This should open a new command prompt that recognizes ruby and rails
+  • Type in :
+  • ruby –v (You should get ruby 1.9.3 or higher)
+3. Install Console 2
+  • http://sourceforge.net/projects/console/
+  • Download and extract this folder to your C:/ drive
+  • This folder should include an exe file called Console as well as a few dependencies it needs to run
+  • Open up the folder in your C drive, and right click the Console.exe file
+  • Select create a shortcut, and drag this new shortcut to your desktop or task bar for easy access
+  • Click your start button and go to All Programs
+  • Find the Rails Installer folder, and right click the Command Prompt with Ruby and Rails
+  • Select properties, then copy the target file path (we’ll need this to setup console 2 properly)
+  • Double click the shortcut you created for Console 2 to start it.
+  • In the menu bar, click edit > settings, then in shell path, paste in the file path you copied, and click ok.
+  • To verify this was installed correctly, close out of console 2 and reopen it.
+  • Type in :
+  • ruby –v (You should get ruby 1.9.3 or higher)
+  • If Console 2 closes immediately, your file path was wrong. You’ll need to re-extract the folder and try again from the beginning.
