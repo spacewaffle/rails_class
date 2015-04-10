@@ -755,11 +755,15 @@ textarea.md{
     td:nth-child(3):before{
       background-image: url("<%= asset_path 'logo-short.png' %>");
     }
-    td:nth-child(4):before{
+    td:nth-child(4){
+      display: none;
+      background-image: url("<%= asset_path 'logo-short.png' %>");
+    }
+    td:nth-child(5):before{
       background-image: url("<%= asset_path 'ga-sm.jpg' %>");
       left: -143px;
     }
-    td:nth-child(5):before{
+    td:nth-child(6):before{
       background-image: url("<%= asset_path 'launch_academy.png' %>");
       background-size: 60px;
       top: 10px;
