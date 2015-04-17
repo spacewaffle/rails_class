@@ -36,7 +36,7 @@ RAILS_ENV=production rake db:migrate
 printf "\n********************\n"
 printf "starting new rails server on port 3001"
 printf "\n********************\n"
-nohup ADMIN_KEY=admin ADMIN_PASS=railsclass2workbar rails s -e production -p 3001 &
+ADMIN_KEY=admin ADMIN_PASS=railsclass2workbar nohup rails s -e production -p 3001 &
 
 printf "\n********************\n"
 printf "Done!"
