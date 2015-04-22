@@ -54,6 +54,21 @@ class AppsController < ApplicationController
       f.puts @app.heard_from;
       f.close_write;
     }
+
+    gb = Gibbon::API.new
+    
+    name_array = app_params[:name].split
+    first_name = app_params[:name]
+    last_name = ""
+    if name_array.length > 1 && name_array[0].length > 0 && name_array[1].length > 0
+      first_name = name_array[0]
+      last_name = name_array[1]
+    end
+    puts "subscribing new user to list"
+    
+    gb.lists.subscribe({:id => "75aba6bef3", :email => {:email => app_params[:email]}, :merge_vars => {:FNAME => first_name, :LNAME => last_name}, :double_optin => true})
+
+
     respond_to do |format|
       if @app.save
         format.html { redirect_to root_path, notice: "A lovely application! We'll be in touch soon!" }
