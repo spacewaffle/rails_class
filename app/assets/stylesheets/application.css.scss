@@ -71,12 +71,12 @@ h1,h2,h3{
  *    `:before` to contain the top-margins of child elements.
  */
 .cf:before,
-.cf:after {
+.cf:after, .clearfix:before,.clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.cf:after {
+.cf:after, .clearfix:after {
     clear: both;
 }
 
@@ -84,7 +84,7 @@ h1,h2,h3{
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.cf {
+.cf, .clearfix {
     *zoom: 1;
 }
 
@@ -133,15 +133,16 @@ h2{
   color: white;
   h2{
     font-weight: 100;
+    line-height: 65px;
   }
 }
 .windows .overlay_container h2{
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
 .wrapper{
   position: absolute;
-  left: 50%;
-  margin: 95px 0 0 -205px;
+  margin: 100px 0 0 10%;
   height: 190px;
   text-align: left;
 }
@@ -205,7 +206,7 @@ video, .placeholder{
 .video_container{
   position: relative;
   width: 100%;
-  background-color: #000;
+  background-color: black;
   z-index: -1;
   overflow: hidden;
   height: 400px;
@@ -300,7 +301,7 @@ video, .placeholder{
   height: 100px;
   overflow: hidden;
   margin: 0 auto;
-  background: url("<%= asset_path 'stock2.jpg' %>") no-repeat center center;
+  background: image-url('stock2.jpg') no-repeat center center;
   background-size: cover;
   margin-bottom: 10px;
   border: 3px solid #ccc;
@@ -311,11 +312,11 @@ video, .placeholder{
 }
 
 .ebenoit{
-  background-image: url("<%= asset_path 'ebenoit.jpg' %>");
+  background-image: image-url('ebenoit.jpg');
 }
 
 .bmckellick{
-  background-image: url("<%= asset_path 'bmckellick.jpg' %>");
+  background-image: image-url('bmckellick.jpg');
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -324,20 +325,20 @@ video, .placeholder{
 }
 
 .lkaiser{
-  background-image: url("<%= asset_path 'lkaiser.jpg' %>");
+  background-image: image-url('lkaiser.jpg');
 }
 
 .scummins{
-  background-image: url("<%= asset_path 'scummins.jpg' %>");
+  background-image: image-url('scummins.jpg');
 }
 
 .aperez{
   background: black;
-  background-image: url("<%= asset_path 'aperez.jpg' %>");
+  background-image: image-url('aperez.jpg');
 }
 
 .dmarkowitz{
-  background-image: url("<%= asset_path 'dmarkowitz.jpg' %>");
+  background-image: image-url('dmarkowitz.jpg');
 }
 
 .highlight{
@@ -459,7 +460,7 @@ textarea.md{
   border-radius: 150px;
   width: 150px;
   height: 150px;
-  background: url("<%= asset_path 'jcheng.jpg' %>") no-repeat center center;
+  background: image-url('jcheng.jpg') no-repeat center center;
   background-size: cover;
   margin: 0 25px 10px 0px;
   border: 3px solid white;
@@ -595,17 +596,21 @@ textarea.md{
 }
 
 .cta{
-  padding: 0 20px;
-  h3, h4{
+  padding: 0;
+  h3{
     font-size: 30px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    margin: 40px 0 10px;
+    margin: 40px 0 0px;
     color: #464946;
+    line-height: 40px;
   }
   h4{
-    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    margin: 20px;
     line-height: 26px;
+    font-weight: bold;
   }
   p, li{
     padding: 15px;
@@ -619,7 +624,7 @@ textarea.md{
     text-align: left;
     max-width: 560px;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 30px;
   }
   .lato{
     font-weight: 300;
@@ -627,9 +632,45 @@ textarea.md{
   }
   .created_by{
     margin-top: 10px;
+    font-weight: 300;
   }
   ul{
     margin: 20px auto 30px;
+    width: 50%;
+    float: right;
+  }
+}
+
+@media(max-width: 1200px){
+  .cta{
+    h4{
+      font-size: 24px;
+      margin: 10px;
+      line-height: 20px;
+    }
+    li{
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0 20px;
+    }
+  }
+}
+
+@media(max-width: 1000px){
+  .cta{
+    ul{
+      display: block;
+      width: 100%;
+    }
+    li{
+      text-align: center;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+    .student_img_wrapper{
+      display: block;
+      width: 100%;
+    }
   }
 }
 
@@ -653,6 +694,34 @@ textarea.md{
 }
 .lato{
   font-family: lato, sans-serif;
+}
+
+.section{
+  margin: 30px 0;
+  background: #F5F7F9;
+  border-top: 1px solid #E9EAEC;
+  border-bottom: 1px solid #E9EAEC;
+}
+.student_img_wrapper{
+  width: 50%;
+  min-height: 508px;
+  height: 100%;
+  float: left;
+  background: image-url("students_edit.jpg");
+  background-size: cover;
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+.students{
+  width: 50%;
+  -moz-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: flipv; /*IE*/
 }
 
 .directions{
@@ -755,25 +824,25 @@ textarea.md{
       margin-top: 20px;
     }
     td:nth-child(2):before{
-      background-image: url("<%= asset_path 'si.png' %>");
+      background-image: image-url('si.png');
       width: 60px;
       background-size: 60px 42px;
       top: 15px;
     }
     td:nth-child(3):before{
-      background-image: url("<%= asset_path 'logo-short.png' %>");
+      background-image: image-url('logo-short.png');
     }
     td:nth-child(4){
       display: none;
-      background-image: url("<%= asset_path 'logo-short.png' %>");
+      background-image: image-url('logo-short.png');
     }
     td:nth-child(5):before{
-      background-image: url("<%= asset_path 'ga-sm.jpg' %>");
+      background-image: image-url('ga-sm.jpg');
       left: -143px;
     }
     td:nth-child(6){
       display: none;
-      background-image: url("<%= asset_path 'ga-sm.jpg' %>");
+      background-image: image-url('ga-sm.jpg');
       left: -143px;
     }
     td.rails-class{
@@ -793,16 +862,20 @@ textarea.md{
   .mobile_hide{
     display: none;
   }
+  .wrapper{
+    margin-top: 65px;
+  }
 }
 
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
    /* CSS overrides for mobile here */
-  video{
-    display: none;
+  // video{
+  //   display: none;
+  // }
+  .overlay_container h2{
+    line-height: 55px;
   }
-  .overlay_container h2 {
-    font-weight: 300;
-  }
+
 }
 
 @media(max-width: 400px){
@@ -811,9 +884,6 @@ textarea.md{
   }
   .cta .lato {
     font-size: 37px;
-  }
-  .cta .created_by{
-    font-size: 20px;
   }
 
   .btns{
