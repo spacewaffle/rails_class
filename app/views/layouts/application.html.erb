@@ -28,6 +28,12 @@
     <nav>
       <%= link_to "Apply Now", "apps/new", class: "nav_link highlight" %>
     </nav>
+  <% elsif @prework %>
+  <style>
+    header{
+      text-align: center;
+    }
+  </style>
   <% else %>
     <nav>
       <a class="nav_link" href="#syllabus">Syllabus</a>

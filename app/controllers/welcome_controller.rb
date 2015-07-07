@@ -6,4 +6,9 @@ class WelcomeController < ApplicationController
   def syllabus
     @hide_nav = true
   end
+
+  def prework
+    @hide_nav = true 
+    @prework = true
+  end
 end
