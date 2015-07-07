@@ -54,7 +54,8 @@ a{
 
 h1,h2,h3{
   font-family: lato, 'Open Sans', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
+  color: $gray;
 }
 
 .windows h1,.windows h2,.windows h3{
@@ -109,17 +110,18 @@ h1{
 header{
   position: fixed;
   z-index: 5;
-  width: 100%;
+  width: 70%;
   top: 0px;
   background-color: white;
   font-size: 50px;
-  text-align: center;
+  text-align: left;
   color: $gray;
-  padding-bottom: 10px;
   font-family: "lato", sans-serif;
   font-weight: 300;
   white-space:nowrap;
   border-bottom: 5px solid $green;
+  margin: 0 auto;
+  padding: 0 15% 10px 15%; 
 }
 h2{
   font-size: 50px;
@@ -130,10 +132,10 @@ h2{
   position: absolute;
   width: 100%;
   margin: 0 auto;
-  color: white;
   h2{
     font-weight: 100;
     line-height: 65px;
+    color: white;
   }
 }
 .windows .overlay_container h2{
@@ -424,14 +426,21 @@ textarea.md{
   height: 100px;
 }
 
+nav{
+  float: right;
+}
+
 .nav_link{
   position: relative;
   font-size: 25px;
   top: 0px;
   padding: 10px 3px 5px;
   transition: top 0.2s;
-  margin: 0 2px;
+  margin: 25px 2px 0;
+  display: inline-block;
 }
+
+
 
 .windows .nav_link{
   font-size: 20px;
@@ -443,11 +452,18 @@ textarea.md{
   top: -5px;
 }
 
-@media(min-width: 1125px){
-  nav {
-    position: absolute;
-    right: 40px;
-    top: 13px;
+
+@media(max-width: 700px){
+  header{
+    text-align: center;
+  }
+  nav{
+    display: block;
+    float: none;
+    text-align: center;
+  }
+  .nav_link{
+    margin-top: 0;
   }
 }
 
@@ -712,12 +728,6 @@ textarea.md{
   float: left;
   background: image-url("students_edit.jpg");
   background-size: cover;
-  -moz-transform: scaleY(-1);
-  -o-transform: scaleY(-1);
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);
-  filter: FlipV;
-  -ms-filter: "FlipV";
 }
 .students{
   width: 50%;
@@ -730,6 +740,7 @@ textarea.md{
 .price{
   color: $gray;
   margin-bottom: 40px;
+  margin-top: 50px;
   h3{
     font-size: 60px;
     font-weight: bold;
@@ -779,9 +790,7 @@ textarea.md{
 }
 
 @media(max-width: 400px){
-  .nav_link{
-    font-size: 21px;
-  }
+
   .cta .lato {
     font-size: 37px;
   }
@@ -797,6 +806,7 @@ textarea.md{
   }
   video {
     left: -80%;
+    display: none;
   }
   .placeholder{
     left: -46%;

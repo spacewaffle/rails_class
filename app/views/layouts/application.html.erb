@@ -17,21 +17,16 @@
 </head>
 <body>
 
-<div id="home"></div>
 <header>
   <a href="/">
-  <span id="drawing"></span>
-  <span class="logo">
-    <span class="highlight">Rails</span>Class
-  </span>
+    <span id="drawing"></span>
+    <span class="logo">
+      <span class="highlight">Rails</span>Class
+    </span>
   </a>
   <% if !@hide_nav %>
     <nav>
-      <% if false %>
-      <a class="nav_link" href="/#testimonials">Testimonials</a>
-      <% end %>
-      <a class="nav_link" href="/#instructor">Instructor</a>
-      <a class="nav_link" href="/#price">Price</a>
+      <%= link_to "Apply Now", "apps/new", class: "nav_link highlight" %>
     </nav>
   <% else %>
     <nav>

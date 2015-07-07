@@ -15,7 +15,6 @@ class AppsController < ApplicationController
   # GET /apps/new
   def new
     @app = App.new
-    @hide_nav = true
   end
 
   # GET /apps/1/edit

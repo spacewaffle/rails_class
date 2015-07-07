@@ -15,7 +15,6 @@ class RequestsController < ApplicationController
   # GET /requests/new
   def new
     @request = Request.new
-    @hide_nav = true
   end
 
   # GET /requests/1/edit
