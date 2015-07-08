@@ -30,11 +30,6 @@ class RequestsController < ApplicationController
       f.puts @request.email;
       f.close_write;
     }
-    IO.popen(["mail", "-s", "New Info Request", "celia@railsclass.com"], "w") {|f|
-      f.puts @request.name;
-      f.puts @request.email;
-      f.close_write;
-    }
 
     gb = Gibbon::API.new
 
@@ -50,7 +45,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
-        format.html { redirect_to root_path, notice: "Great, we'll be in touch soon!" }
+        format.html { redirect_to "/syllabus", notice: "Great, we'll be in touch soon!" }
         format.json { render :show, status: :created, location: @request }
       else
         format.html { render :new }
