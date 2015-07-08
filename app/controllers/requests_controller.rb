@@ -45,7 +45,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
-        format.html { redirect_to "/syllabus", notice: "Great, we'll be in touch soon!" }
+        format.html { redirect_to "/syllabus" }
         format.json { render :show, status: :created, location: @request }
       else
         format.html { render :new }
