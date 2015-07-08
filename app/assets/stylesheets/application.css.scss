@@ -107,10 +107,10 @@ h1{
   font-size: 50px;
   font-weight: 300;
 }
-header{
+.header_wrapper{
   position: fixed;
   z-index: 5;
-  width: 70%;
+  width: 100%;
   top: 0px;
   background-color: white;
   font-size: 50px;
@@ -120,6 +120,9 @@ header{
   font-weight: 300;
   white-space:nowrap;
   border-bottom: 5px solid $green;
+}
+header{
+  width: 70%;
   margin: 0 auto;
   padding: 0 15% 10px 15%; 
 }
@@ -375,7 +378,7 @@ textarea{
   font-size: 21px;
   line-height: 40px;
   position: relative;
-  top: 15px;
+  margin-top: -20px;
 }
 
 .submit{
@@ -454,7 +457,7 @@ nav{
 
 
 @media(max-width: 700px){
-  header{
+  .header_wrapper{
     text-align: center;
   }
   nav{

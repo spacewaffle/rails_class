@@ -16,35 +16,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="header_wrapper">
+  <header>
 
-<header>
-  <a href="/">
-    <span id="drawing"></span>
-    <span class="logo">
-      <span class="highlight">Rails</span>Class
-    </span>
-  </a>
-  <% if !@hide_nav %>
-    <nav>
-      <%= link_to "Apply Now", "apps/new", class: "nav_link highlight" %>
-    </nav>
-  <% elsif @prework %>
-  <style>
-    header{
-      text-align: center;
-    }
-  </style>
-  <% else %>
-    <nav>
-      <a class="nav_link" href="#syllabus">Syllabus</a>
-      <a class="nav_link" href="#directions">Directions</a>
-      <a class="nav_link" href="#payment">Payment</a>
-    </nav>
-  <% end %>
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
-</header>
+    <a href="/">
+      <span id="drawing"></span>
+      <span class="logo">
+        <span class="highlight">Rails</span>Class
+      </span>
+    </a>
+    <% if !@hide_nav %>
+      <nav>
+        <%= link_to "Apply Now", "apps/new", class: "nav_link highlight" %>
+      </nav>
+    <% elsif @prework %>
+    <style>
+      header{
+        text-align: center;
+      }
+    </style>
+    <% else %>
+      <nav>
+        <a class="nav_link" href="#syllabus">Syllabus</a>
+        <a class="nav_link" href="#directions">Directions</a>
+        <a class="nav_link" href="#payment">Payment</a>
+      </nav>
+    <% end %>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+  </header>
+</div>
 
 <div class="container">
   <%= yield %>
