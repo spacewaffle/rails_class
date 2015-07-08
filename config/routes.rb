@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get 'efQ9' => 'welcome#syllabus'
+  get 'syllabus' => 'welcome#syllabus'
 
   get 'prework' => "welcome#prework"
 
