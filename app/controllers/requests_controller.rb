@@ -30,6 +30,10 @@ class RequestsController < ApplicationController
       f.puts @request.email;
       f.close_write;
     }
+    Email.send("Welcome to RailsClass #{@request.name}, talk to an instructor!", 
+      @request.email, 
+      @request.name,
+      render_to_string('emails/syllabus', :locals => {user: @request.name, url: base_url}, :layout => false))
 
     gb = Gibbon::API.new
 
@@ -41,7 +45,7 @@ class RequestsController < ApplicationController
       last_name = name_array[1]
     end
     puts "subscribing new user to list"
-    gb.lists.subscribe({:id => "75aba6bef3", :email => {:email => request_params[:email]}, :merge_vars => {:FNAME => first_name, :LNAME => last_name}, :double_optin => true})
+    gb.lists.subscribe({:id => "75aba6bef3", :email => {:email => request_params[:email]}, :merge_vars => {:FNAME => first_name, :LNAME => last_name}, :double_optin => false})
 
     respond_to do |format|
       if @request.save

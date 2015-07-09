@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'tzinfo-data'
 
+gem 'mandrill-api'
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'rails_admin'
