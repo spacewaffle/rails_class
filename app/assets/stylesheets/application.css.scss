@@ -412,6 +412,8 @@ textarea{
   text-align: center;
   padding: 20px;
   margin-bottom: 50px;
+  max-width: 600px;
+  margin: auto auto;
   textarea, select{
     margin: 15px auto 30px;
     display: block;
@@ -421,6 +423,10 @@ textarea{
   }
   .field{
     margin-top: 20px;
+  }
+  label{
+    line-height: 27px;
+    font-size: 18px;
   }
 }
 

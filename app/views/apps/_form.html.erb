@@ -20,6 +20,25 @@
   <div class="field">
     <%= f.text_area :phone, placeholder: "Phone number" %>
   </div>
+  <div class="field">
+    <div>
+      <%= f.label :currently, "Tell us a little bit about what you currently do." %>
+    </div>
+    
+    <%= f.text_area :currently, class: "md" %>
+  </div>
+  <div class="field">
+    <div>
+      <%= f.label :experience, "Do you have any prior web development, or programming experience? This can include any classes you've taken.", class: "md" %>
+    </div>
+    <%= f.text_area :experience, class: "md", placeholder: "" %>
+  </div>
+  <div class="field">
+    <div>
+      <%= f.label :looking_for, "What skills or experiences are you looking to get from this course? Do you have any future long term goals related to these skills or experiences?" %>
+    </div>
+    <%= f.text_area :looking_for, class: "md" %>
+  </div>
   <% if false %>
   <div class="field">
     <%= f.text_area :date, placeholder: "When can you start?", class: "md" %>
@@ -36,25 +55,8 @@
       "Entrepreneur (starting/growing a business)",
       "Student"]) %>
   </div>
-  <div class="field">
-    <div>
-      <%= f.label :currently, "Tell us a little bit about what you currently do." %>
-    </div>
-    
-    <%= f.text_area :currently, class: "lg" %>
-  </div>
-  <div class="field">
-    <div>
-      <%= f.label :looking_for, "What are you looking to get from this course?" %>
-    </div>
-    <%= f.text_area :looking_for, class: "md" %>
-  </div>
-  <div class="field">
-    <div>
-      <%= f.label :experience, "Do you have prior front end, back end web development, or programming experience?", class: "md" %>
-    </div>
-    <%= f.text_area :experience, class: "md", placeholder: "" %>
-  </div>
+
+
   <div class="field">
     <div>
       <%= f.label :ideas, "Do you have an idea for a website you've always wanted to build?" %>
@@ -72,7 +74,7 @@
     <div>
       <%= f.label :heard_from, "How did you hear about us?" %>
     </div>
-    <%= f.text_area :heard_from, class: "md" %>
+    <%= f.text_area :heard_from %>
   </div>
   <div class="actions">
     <%= f.submit "Get In Touch", class: "btns submit" %>
